@@ -57,11 +57,11 @@ app.on('activate', () => {
 ipcMain.handle('print', () => {
   console.log('print')
   mainWindow.webContents.print({
-    silent: false,
-    landscape: true,
-    margins: {
-      marginType: 'printableArea'
-    }
+    silent: true,
+    // landscape: true,
+    // margins: {
+    //   marginType: 'printableArea'
+    // }
   }, (success, reason) => {
     if (success) {
       console.log('print successfully')
